@@ -1,12 +1,13 @@
 // This file intentionally contains linting violations
 // to demonstrate that the ESLint workflow correctly fails the CI check.
 
-const unusedVariable = "I am never used"
-const anotherUnused = 42
+var unusedVariable = "this variable is never used"
+const message = "Hello, world!"
 
 function greet(name) {
-    console.log("Hello, " + name)
-    return "Hi " + name
+    console.log("Greeting: " + name)
+    var anotherUnused = 42
+    return "Hi, " + name
 }
 
-greet("World")
+greet("Tester")
